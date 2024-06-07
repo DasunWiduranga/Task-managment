@@ -1,4 +1,5 @@
 import React from 'react';
+import { TableRow, TableCell, Button, Select, MenuItem } from '@mui/material';
 
 function TaskItem({ task, updateTask, deleteTask }) {
   const handleStatusChange = (e) => {
@@ -6,20 +7,33 @@ function TaskItem({ task, updateTask, deleteTask }) {
   };
 
   return (
-    <li>
-      <h3>{task.title}</h3>
-      <p>{task.description}</p>
-      <p>Assigned to: {task.assignedTo}</p>
-      <select value={task.status} onChange={handleStatusChange}>
-        <option value="pending">Pending</option>
-        <option value="in progress">In Progress</option>
-        <option value="completed">Completed</option>
-      </select>
-      <button onClick={() => deleteTask(task.id)}>Delete</button>
-    </li>
-
-
-
+    <TableRow>
+      <TableCell>{task.title}</TableCell>
+      <TableCell>{task.description}</TableCell>
+      <TableCell>{task.assignedTo}</TableCell>
+      <TableCell>
+        <Select
+          value={task.status}
+          onChange={handleStatusChange}
+          displayEmpty
+          variant="outlined"
+          fullWidth
+        >
+          <MenuItem value="pending">Pending</MenuItem>
+          <MenuItem value="in-progress">In Progress</MenuItem>
+          <MenuItem value="completed">Completed</MenuItem>
+        </Select>
+      </TableCell>
+      <TableCell>
+        <Button 
+          variant="contained" 
+          color="error" 
+          onClick={() => deleteTask(task.id)}
+        >
+          Delete
+        </Button>
+      </TableCell>
+    </TableRow>
   );
 }
 
