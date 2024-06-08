@@ -20,7 +20,7 @@ function TaskItem({ task, updateTask, deleteTask }) {
           fullWidth
         >
           <MenuItem value="pending">Pending</MenuItem>
-          <MenuItem value="in-progress">In Progress</MenuItem>
+          <MenuItem value="in progress">In Progress</MenuItem>
           <MenuItem value="completed">Completed</MenuItem>
         </Select>
       </TableCell>
