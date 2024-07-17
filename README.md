@@ -14,7 +14,7 @@ This is a task management system built with Spring Boot for the backend and Reac
 ### Backend (Spring Boot)
 
 1. **Clone the repository**:
-git clone https://github.com/DasunWiduranga/taskmanagement.git
+git clone https://github.com/DasunWiduranga/Task-managment.git
 cd taskmanagement
 Setup MySQL Database:
 
