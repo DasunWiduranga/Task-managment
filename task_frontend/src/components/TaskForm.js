@@ -17,7 +17,7 @@ function TaskForm({ addTask }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newTask = { title, description, assigned_to: assignedTo, status };
+    const newTask = { title, description, assignedTo, status };
     addTask(newTask);
     setTitle("");
     setDescription("");
